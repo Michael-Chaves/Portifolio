@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primaria: #137100;
+    --secundaria: #21ff72;
+    --escuro: #014c00; /* cor corrigida */
+    --mais-escuro: #010a00;
+    --claro: #ffffff;
+    --vidro: #393939;
+}
+
+body {
+    background-color: var(--mais-escuro);
+    color: var(--claro);
+}
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    background: var(--escuro, 0.8);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem 0;
+   
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    justify-content: center;
+}
+
+
+.menu-link {
+    text-decoration: ;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link::after{
+    content: '';
+    height: 2px;
+    width:0;
+    position: absolute;
+    bottom: 0;
+    left: 0;   
+    background: linear-gradient(90deg, var(--primaria) 0%, var(--secundaria) 100%);
+    transition: width 0.5s ease;
+
+}
+
+.menu-link:hover::after {
+    width: 100%;
+    
+}
+
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto-perfil {
+ 
+    width:200px;
+    height: 350px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    border: 5px solid var(--escuro);
+    
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primaria);
+    font-weight: bold;
+    margin: 20px;
+}       
+
+.cabecalho-subtitulo {
+    font-size: 1.5rem;  
+    color: var(--claro);
+    margin: 1px;
+}
+
+.sobre {
+    background-color: var(--mais-escuro);
+    padding: 6rem 2rem;
+    text-align: center;
+    margin: 20px;
+}
+
+.sobre-titulo {
+    font-size: 2.5rem;
+    color: var(--primaria);
+    text-align: center;
+    padding: 20px;
+}
+
+.sobre-caixa {
+    padding: 2rem;
+    max-width: auto;
+    margin-inline: auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.sobre-paragrafo {
+    font-size: 1.2rem;
+    color: var(--);
+    padding: 30px;
+    text-align: center;
+
+}
+
+.projetos {
+    
+    padding: 6rem 2rem;
+}
+
+.projetos-titulo {
+    font-size: 2.5rem;
+    color: var(--primaria);
+    text-align: center;
+    padding: 20px;
+}
+
+.projetos-card:hover {
+    box-shadow: 0 0 20px rgba(37, 114, 7, 0.658);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.projetos-card {
+    background: rgba(30, 61, 28, 0.467);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--claro);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  
+    
+}
+
+.projetos-imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    
+    
+}
+
+.caixa-texto-projetos {
+    padding: 1rem;
+  
+}
+
+.info-projetos {
+    margin-bottom: 1rem;
+    padding: auto;
+   
+
+}
+
+.paragrafo-projetos {
+
+    color: var(-claro);
+    line-height: 1.5rem;
+    
+    
+   
+}
+
+.contato {
+    background-color: var(--mais-escuro);
+    text-align: center;
+    padding: auto;
+    margin: 20px;
+}
+
+.contato-titulo {
+    font-size: 2.5rem;
+    color: var(--primaria);
+    text-align: center;
+    padding: 20px;
+}
+
+.formulario-contato {
+    max-width: 600px;
+    margin: auto;
+    padding: 5px;
+    background-color: rgba(30, 61, 28, 0.467);
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+}
+
+.grupo-form {
+
+    display: grid;
+    margin: 7px;
+}
+
+.campo-form {
+
+    height: 30px;
+   background-color: rgba(30, 61, 28, 0.467);
+   border: 1px solid var(--vidro);
+   border-radius: 6px;
+
+}
+
+.text-form {
+    height: 100px;
+    background-color: rgba(30, 61, 28, 0.467);
+    border: 1px solid var(--vidro);
+    border-radius: 6px;
+}
+
+input::placeholder,
+textarea::placeholder {
+
+    color: var(--claro);
+    font-size: 1rem;
+    padding: 10px;
+    
+  
+}
